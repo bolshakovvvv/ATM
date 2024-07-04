@@ -6,6 +6,6 @@ import lombok.Data;
 public class DepositMoneyRequest {
 
     Integer number;
-
     Integer amount;
+
 }

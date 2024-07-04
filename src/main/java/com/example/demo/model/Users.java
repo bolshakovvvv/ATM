@@ -13,13 +13,15 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    private Integer id;
 
-    String name;
-    String surname;
+    @Column(name = "name")
+    private String name;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id", referencedColumnName = "user_id")
+    @Column(name = "surname")
+    private String surname;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Accounts account;
 
 }

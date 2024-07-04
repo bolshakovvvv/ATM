@@ -6,6 +6,6 @@ import lombok.Data;
 public class WithdrawMoneyRequest {
 
     Integer number;
-
     Integer amount;
+
 }

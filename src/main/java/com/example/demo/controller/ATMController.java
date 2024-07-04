@@ -35,8 +35,8 @@ public class ATMController {
     }
 
     @GetMapping("/get-balance/{id}")
-    public ResponseEntity<Integer> getBalance(@PathVariable Integer id) {
-        return new ResponseEntity<>(atmService.getBalanceById(id), HttpStatus.OK);
+    public ResponseEntity<Integer> getBalance(@PathVariable Integer number) {
+        return new ResponseEntity<>(atmService.getBalanceByNumber(number), HttpStatus.OK);
     }
 
 }

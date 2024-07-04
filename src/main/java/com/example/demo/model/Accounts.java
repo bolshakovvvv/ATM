@@ -13,10 +13,16 @@ import lombok.NoArgsConstructor;
 public class Accounts {
 
     @Id
-    @Column(name = "user_id")
     private Integer id;
 
-    Integer number;
-    Integer balance;
+    @Column(name = "balance")
+    private int balance;
 
+    @Column(name = "number")
+    private int number;
+
+    @OneToOne
+    @MapsId
+    @JoinColumn(name = "id")
+    private Users user;
 }

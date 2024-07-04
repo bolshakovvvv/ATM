@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class SendMoneyRequest {
+
     int senderNumber;
-
     int receiverNumber;
-
     int amount;
+
 }
