@@ -12,7 +12,7 @@
 - Java
 - Spring Boot
 - Spring Data JPA
-- PostgreSQL
+- MySQL
 
 ## Установка и запуск
 1. Клонируйте репозиторий:
@@ -23,15 +23,14 @@
     ```bash
     cd ATM
     ```
-3. Создайте базу данных PostgreSQL с именем `atm_db`.
+3. Создайте базу данных MySQL с именем `atm`.
 4. Настройте `application.properties` с вашими учетными данными для базы данных:
     ```properties
-    spring.datasource.url=jdbc:postgresql://localhost:5432/atm_db
-    spring.datasource.username=your_username
-    spring.datasource.password=your_password
     spring.jpa.hibernate.ddl-auto=update
     spring.jpa.show-sql=true
-    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+    spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/users
+    spring.datasource.username=root
+    spring.datasource.password=root
     ```
 5. Соберите и запустите проект с помощью Maven:
     ```bash
